@@ -1,0 +1,28 @@
+{% import 'macro' as macro %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ chart.page_title }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    {{ macro.render_chart_dependencies(chart) }}
+</head>
+<body>
+<div id="app">
+    <h1 style="text-align: center">2020年世界GDP排名</h1>
+</div>
+{{ macro.render_chart_content(chart) }}
+
+</body>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {}
+        }
+    })
+</script>
+</html>
